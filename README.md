@@ -36,14 +36,14 @@ Routes::addPage("name_of_the_page", function() {
     
     If you want to attach partial views in the page, just simply typing:
     
-    YourController::addView(Shared/_header);
+    YourController::addView("Shared/_header");
     
     If you want to pass data to the views just typing the following code 
     
     $data_to_pass_in = "Put something here";
-    YourController::addView(view_name_without_.php,$data_to_pass_in);
+    YourController::addView("view_name_without_php_extension",$data_to_pass_in);
     
-    And then to obtain data passed by Controller, just get it from $_GET[data_view]; 
+    And then to obtain data passed by Controller, just get it from $_GET["data_view"]; 
 };
 
 
