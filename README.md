@@ -1,7 +1,7 @@
 # LILCA_MVC_FRAMEWORK
-This is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications.
+This is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications. Please Credit to Lilcasoft.info
 
-**HOW TO USE**
+**HOW TO USE???**
 
 Before start using it, you need to understand the basic structure of the **MVC**.
 
@@ -32,7 +32,7 @@ To create a new page, please start the block syntax like so:
 Routes::addPage("name_of_the_page", function() {
 	Inside here, you just attach all the views to be display in this page by typing the following code
     
-    YourController::addView("view_name_without_.php");
+    YourController::addView("view_name_without_php_extension");
     
     If you want to attach partial views in the page, just simply typing:
     
