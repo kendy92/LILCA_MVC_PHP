@@ -12,7 +12,7 @@ class CoreController extends DB {
     if(file_exists("views/".$viewname.".php")){
       require_once "views/".$viewname.".php";
     }else{
-      echo "<div style='background-color:black; font-weight:bold; padding:1em; color:red;'>View ".$viewname." does not exist!</div>";
+      echo "<div class='alert alert-danger' role='alert'>View <strong>'".$viewname."'</strong> does not exist!</div>";
     }
   }
 }
