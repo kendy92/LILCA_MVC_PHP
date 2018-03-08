@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
-	  RewriteEngine On
-	  RewriteBase /lilca-mvc/
+    RewriteEngine On
+    RewriteBase /lilca_mvc_dev/
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-l

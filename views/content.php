@@ -1,8 +1,6 @@
 <?php
 
-if(isset($_GET['data_view'])){ //check if any data passes to view by controller
-  $result =  "Data received from Home controller: ".$_GET['data_view'];
-}
+$result = "Received data from controller: <strong>".HomeController::$viewBag."</strong>";
  ?>
 
 <div class="container">
