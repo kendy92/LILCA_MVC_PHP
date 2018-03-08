@@ -149,8 +149,8 @@ class YourController extends CoreController {
     }
 
     public static showData() {
-    	$data = YourModel::displayRow(); //return result from model and assigned to variable called $data
-        HomeController::addView("content",$data); //Passing $data to content view
+    	$data = YourModel::displayRow(); // assign result from model  to variable called $data
+			return $data;
     }
 }
 ```
@@ -159,12 +159,9 @@ Opening the content.php file in views folder and do the following code to get th
 
 ```sh
 $get_data = YourController::$viewBag;
-foreach($get_data as $data) {
-	echo $data."<br>";
-}
 ```
 
-**YourController::$viewBag** is the public property belongs to Controller that contains data you pass directly from route to the view. Passing data can be anything (array, integer, string...)
+**YourController::$viewBag** is the public property belongs to YourController that contains data you pass directly from route to the view. Passing data can be anything (array, integer, string...)
 
 
 
