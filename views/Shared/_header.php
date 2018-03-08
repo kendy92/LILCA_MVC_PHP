@@ -5,7 +5,7 @@
 <meta name="description" content="">
 <meta name="author" content="Lilca Dinh">
 <meta charset="utf-8">
-<title>LILCA MVC FRAMEWORK VERSION 1.0</title>
+<title>LILCA MVC FRAMEWORK VERSION 2.0</title>
 <!--STYLE SHEET INCLUDED BOOTSTRAP 4.0-->
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <link rel="stylesheet" href="./css/bootstrap.min.css"> <!--BOOTSTRAP CSS 4.0 -->
