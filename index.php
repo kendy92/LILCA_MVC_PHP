@@ -11,8 +11,6 @@
       require_once "_core/".$file_name.".php";
     } else if(file_exists("controllers/".$file_name.".php")) { //LOAD CONTROLLERS
       require_once "controllers/".$file_name.".php";
-    }else if(file_exists("models/".$file_name.".php")) { //LOAD MODELS
-      require_once "models/".$file_name.".php";
     }
   }
 

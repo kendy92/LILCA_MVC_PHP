@@ -3,6 +3,8 @@
   CORE CONTROLLER. DO NOT TOUCH THIS FILE
   CODED BY LILCASOFT.INFO
 */
+require_once "./models/DB.php";
+
 class CoreController extends DB {
 
   public static $viewBag;
@@ -19,7 +21,7 @@ class CoreController extends DB {
     }
   }
 
-  public static function loadModel($model_name) {
+  protected static function loadModel($model_name) {
     if(file_exists("models/".$model_name.".php")) {
       require_once "models/".$model_name.".php";
     }else {

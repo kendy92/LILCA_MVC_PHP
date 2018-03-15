@@ -85,6 +85,7 @@ class YourModel extends DB {
     public static function displayRow(){
 
     		//Code your logic here
+				return "This is display row function";
 
     }
 }
@@ -107,7 +108,7 @@ class YourController extends CoreController {
 Open file route.php and do the following code:
 
 ```sh
-Routes::addPage("your_page_name", function() { //add in your desire page name in first parameter
+Routes::addPage("your_page_name", function() { //put in your desire page name in first parameter
     echo YourController::index("Hello world");
 });
 ```
@@ -127,11 +128,11 @@ Routes::addPage("home", function() {
 
 The page will be run the header file, navigation, content, footer in order respectively. If you don't want to attach navigation to home view, then just remove it from route.
 
-**7 - PASSING DATA FROM ROUTE TO VIEW IN ROUTE**
+**7 - PASSING DATA FROM ROUTE TO VIEW IN Route.php**
 
 ```sh
 Routes::addPage("test_page", function() {
-	$fooArr = [1,2,3,4,5];
+		$fooArr = [1,2,3,4,5];
     HomeController::addView("Shared/_header");
     HomeController::addView("Shared/_navigation");
     HomeController::addView("content",$fooArr);
@@ -139,7 +140,9 @@ Routes::addPage("test_page", function() {
 });
 ```
 
-**8 - RETRIEVE RESULT FROM MODEL TO CONTROLLER AND PASS TO VIEW**
+**8 - GET RESULT FROM MODEL TO CONTROLLER AND PASS TO VIEW**
+
+Adding function called showData() to YourController file and load model file that you want to use by using self::loadModel("YourModel")
 
 ```sh
 class YourController extends CoreController {
@@ -149,16 +152,30 @@ class YourController extends CoreController {
     }
 
     public static showData() {
+			self::loadModel("YourModel");
     	$data = YourModel::displayRow(); // assign result from model  to variable called $data
 			return $data;
     }
 }
 ```
 
-Opening the content.php file in views folder and do the following code to get the value.
+Open route.php file and do like so:
+
+```sh
+Routes::addPage("test", function() {
+    $result = YourController::showData();
+    HomeController::addView("Shared/_header");
+    HomeController::addView("Shared/_navigation");
+    HomeController::addView("content", $result); //pass data to view content.php
+    HomeController::addView("Shared/_footer");
+});
+```
+
+Open the content.php file in views folder and do the following code to get the value.
 
 ```sh
 $get_data = YourController::$viewBag;
+echo $get_data; //output the result to screen
 ```
 
 **YourController::$viewBag** is the public property belongs to YourController that contains data you pass directly from route to the view. Passing data can be anything (array, integer, string...)
