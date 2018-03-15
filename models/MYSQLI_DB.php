@@ -2,7 +2,7 @@
 /*
   CORE MODEL DB. DO NOT TOUCH THIS FILE
 */
-class DB {
+class MYSQLI_DB {
   private static $host = "localhost";
   private static $user = "root";
   private static $pass = "";
