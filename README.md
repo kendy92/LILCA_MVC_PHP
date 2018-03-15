@@ -118,7 +118,7 @@ Routes::addPage("your_page_name", function() { //put in your desire page name in
 Route treats all files in stack order which means whatever you put first will be execute first.
 Have a look at this example:
 ```sh
-Routes::addPage("home", function() {
+Routes::addPage("your_page_name", function() {
     HomeController::addView("Shared/_header");
     HomeController::addView("Shared/_navigation");
     HomeController::addView("content");
