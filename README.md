@@ -1,24 +1,20 @@
 # LILCA_MVC_FRAMEWORK
 This is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications. Please Credit to Lilcasoft.info
 
+QUICK CRASH COURSE TO GET USE THE FRAMEWORK: https://youtu.be/X6LnqHxG-3Y
+
 **HOW TO USE???**
 
 Unzip the **LILCA_MVC_FRAMEWORK** folder and you will see there are 3 criticals folders named **models**, **views** and **controllers** and the file named **route.php**
 
 - In controllers folder, we have **HomeController** which is default one so whenever you open the app, it will direct you to the HomeController.
 
-- In models folder, we have **DB.php** where stores your own database configuration and some built in functions including connectDB, closeDB and protectVal... to use these function, just simple type:
+- In models folder, we have 2 class files called **MYSQLI_DB.php** and **PDO_DB.php** which are built in model classes for PDO and MYSQLI. Depend on purpose of your project, you will extends to one of them to use its own properties and methods. (By default, it will use PDO_DB in Controllers/CoreController.php, please make change in this file if you use **MYSQLI_DB** class)
 
-
-```sh
-- DB::connectDB(); //make connection to DB
-- DB::closeDB(); //close conntection to DB
-- DB::protectVal($_POST['name_from_form']); //Anti SQL Injection through $_POST value to DB
-```
 
 - In views folder, we have **Shared folder** where contains partial views and it has static layout like header, footer and navigation running through the entire page.
 
-Now, just have a look at file **route.php**. This file is crucial component to connect your MVC together.
+Now, just have a look at file **route.php**. This file is crucial component to map your MVC together.
 
 **RECONFIGURE .htaccess file**
 In order to run the project in MVC way, you have to make change in this file. In RewriteBase just re define your app folder base. In default it will be /lilca_mvc_dev/
@@ -103,7 +99,7 @@ class YourController extends CoreController {
 }
 ```
 
-**5 - CREATE A NEW ROUTE**
+**5 - CREATE A NEW PAGE**
 
 Open file route.php and do the following code:
 
