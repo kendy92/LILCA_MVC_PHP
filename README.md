@@ -1,4 +1,4 @@
-# LILCA_MVC_FRAMEWORK
+# LILCA_MVC_FRAMEWORK 2.0
 This is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications. Please Credit to Lilcasoft.info
 
 QUICK CRASH COURSE TO GET USE THE FRAMEWORK: https://youtu.be/X6LnqHxG-3Y
