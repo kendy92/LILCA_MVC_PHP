@@ -54,10 +54,5 @@ class Validation {
             return false;
           }else { return true; }
   }
-
-  public function isBoxChecked($val){
-      self::setObj($val);
-      return !isset(self::getObj()) && empty(self::getObj()) ? false : true;
-    }
 }
  ?>
