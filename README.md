@@ -187,6 +187,25 @@ So now you know how to turn your project into MVC. To sum up, There are 4 main s
 4. Create your page in route.php file to connect your MVC structure
 ```
 
+**HOW TO USE VALIDATION LIBRARY TO VALIDATE FORM FIELD**
+
+Include the validation library to your file by using:
+
+```sh
+require_once "validation.php";
+```
+
+To test format of the input using this function:
+
+```sh
+Validation::testFormat($test_value, $name_of_format);
+```
+
+This function will return true if match, otherwise false
+
+List of test format:
+date, email, postcode, name, phone, currency, url,username ,password
+
 **Cheers!!!**
 
 LILCA DINH
