@@ -5,7 +5,7 @@
    */
 
 class Validation {
-  private static $regx_arr = array('date' => '/^\d{4}-\d{2}-\d{2}$/',
+  private static $regx_arr = array('date' => '/^\w{4}-\w{2}-\w{2}$/',
                                    'email' => '/^[\w\.]+@\w+\.\w{3}$/',
                                    'postcode' => '/^([a-zA-Z]\d[a-zA-Z])\ {0,1}(\d[a-zA-Z]\d)$/',
                                    'name' => '/^[a-zA-Z ]+$/',
