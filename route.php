@@ -15,5 +15,4 @@ Routes::addPage("home", function() { //DEFAULT HOME PAGE. DONT REMOVE. If you ch
 });
 
 /* BEGIN YOUR ROUTING HERE */
-
  ?>
