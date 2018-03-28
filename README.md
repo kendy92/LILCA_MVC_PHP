@@ -191,7 +191,7 @@ echo $get_data; //output the result to screen
 
 
 
-**9 - GET DATA FROM FORMATED URL **
+**9 - GET DATA FROM FORMATED URL**
 
 To get data from an url like: product/category/item you will use **Routes::url_segment(index_of_segment_in_url)** to get that value in the formatted url.
 Basically, the url will exclude the project folder name and only count from the page name to the end. For instance, product will be the page name and index segment is 1, category will have index segment of 2 and item will have index segment of 3 and so on. Otherwise, you can use query string instead of using formated url.
